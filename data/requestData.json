@@ -1,0 +1,19 @@
+{
+	"case1": {
+		"data": [
+			{
+				"doctorId": "",
+				"status": "in"
+			},
+			{
+				"doctorId": "116",
+				"status": "in"
+			}
+		],
+		"assert": [
+			{"msg":null},
+			{"code":0}
+		
+		]
+	}
+}
