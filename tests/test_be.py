@@ -34,8 +34,6 @@ class Test(unittest.TestCase):
         (data1, assertStr1)=ltuple1[i]
         def test_001(self):
             global t1json
-            print(data1)
-            print(type(data1))
             #登陆系统
             r=obj.post(1,p_purl,data1,p_url)
             lstr = p.getContent(json.dumps(assertStr1))
@@ -72,11 +70,11 @@ class Test(unittest.TestCase):
             t2json = r.json()
             self.write2excel(r, 2, p_url)
     def test_003(self):
-        global t1json
-        global t2json
+        global t1json,t2json
         print("88888888888888888888888888888888888")
-        print(t2json)
         print(t1json)
+        print(t2json)
+
         pass
         #print(Test.__dict__["l2"][1])
     """ def test_002(self):
