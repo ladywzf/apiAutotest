@@ -43,7 +43,6 @@ class Test(unittest.TestCase):
             str = lstr[0]
             str1 = str.replace(" ", "")
             self.assertIn(str1,lr)
-            print(r.json())
             if r.json()["data"]!=None:
                 p.writeToken(p_token, r.json()["data"]["token"])
             t1json=r.json()
