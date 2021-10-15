@@ -1,3 +1,5 @@
+import sys
+sys.path.append(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\apiAutotest')
 from apiAutotest.base.method import *
 import unittest
 from apiAutotest.utils.excel_data import excel_data as e

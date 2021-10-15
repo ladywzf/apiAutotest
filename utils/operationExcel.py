@@ -1,5 +1,7 @@
 #作者:Administrator
 #时间:2019/10/19
+import sys
+sys.path.append(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\apiAutotest')
 import xlrd
 from apiAutotest.utils.public import *
 from apiAutotest.utils.excel_data import excel_data
