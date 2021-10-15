@@ -8,7 +8,7 @@ if __name__ == '__main__':
     testcase=unittest.defaultTestLoader.discover(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\apiAutotest\tests',pattern='test*.py')
     #testcase = unittest.defaultTestLoader.discover(test_dir,pattern='test*.py')
     #now = time.strftime("%Y-%m-%d_%H_%M_%S", time.localtime(time.time()))
-    filepath = r"E:\\{0}".format(os.path.basename(os.path.dirname(os.path.dirname(__file__))))+"\\reports\\"
+    filepath = r"E:\\{0}".format(os.path.basename(os.path.dirname(os.path.dirname(__file__))))+r"\\reports\\{1}\\".format(os.path.splitext(os.path.basename(os.path.abspath(__file__)))[0])
     if not os.path.exists(filepath):
         os.makedirs(filepath)
     ls = os.listdir(filepath)
