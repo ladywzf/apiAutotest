@@ -2,9 +2,9 @@
 #时间:2019/10/19
 from xlutils import copy
 import os
-from utils.operationJson import *
+from apiAutotest.utils.operationJson import *
 import xlrd
-from utils.operationExcel import *
+from apiAutotest.utils.operationExcel import *
 import re
 class public:
     # 获取文件路径
@@ -13,7 +13,7 @@ class public:
 
     # 创建目录
     def mkdir(self, foldername):
-        path_dir ="{0}".format(os.path.dirname(os.path.dirname(__file__)))+ "\\{foldername}\\".format(foldername=foldername)
+        path_dir ="E:\\"+"{0}".format(os.path.basename(os.path.dirname(os.path.dirname(__file__))))+"\\data\\{foldername}\\".format(foldername=foldername)
         if not os.path.exists(path_dir):
             os.makedirs(path_dir)
         return path_dir
@@ -130,6 +130,6 @@ class public:
         lr = lr[1].split("}")
         lr = lr[0].split(",")
         return lr
-    #删除目录下所有文件
+
 
 

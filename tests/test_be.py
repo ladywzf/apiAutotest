@@ -1,13 +1,13 @@
-from base.method import *
+from apiAutotest.base.method import *
 import unittest
-from utils.excel_data import excel_data as e
-from utils.public import *
-import os
-import traceback
+from apiAutotest.utils.excel_data import excel_data as e
+from apiAutotest.utils.public import *
+
 
 obj = method()
 excel_data = e()
 p = public()
+fileName=os.path.splitext(os.path.basename(os.path.abspath(__file__)))[0]
 # 获取实际结果列数
 r_col = excel_data.get_result_col()
 # 获取响应时间列数
@@ -16,10 +16,10 @@ f_purl = "public_url.json"
 f_param = "requestData.json"
 f_url = "data.xls"
 f_token = "token"
-p_purl = p.mkfile("data", f_purl)
-p_param = p.mkfile("data", f_param)
-p_url = p.mkfile("data", f_url)
-p_token = p.mkfile("data", f_token)
+p_purl = p.mkfile(fileName, f_purl)
+p_param = p.mkfile(fileName, f_param)
+p_url = p.mkfile(fileName, f_url)
+p_token = p.mkfile(fileName, f_token)
 
 class Test(unittest.TestCase):
 
@@ -28,7 +28,7 @@ class Test(unittest.TestCase):
         p.writeResult(row, t_col, r.elapsed.total_seconds(),f)
     global data1
     global assertStr1
-    global t1json
+    #global t1json
     ltuple1=p.getData(1, p_purl, p_url)
     for i in range(len(ltuple1)):
         (data1, assertStr1)=ltuple1[i]
@@ -54,7 +54,7 @@ class Test(unittest.TestCase):
     ltuple2 = p.getData(2, p_param, p_url)
     global data2
     global assertStr2
-    global t2json
+    #global t2json
     for i in range(len(ltuple2)):
         (data2, assertStr2) = ltuple2[i]
         def test_002(self):

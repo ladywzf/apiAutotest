@@ -3,7 +3,7 @@
 
 
 import json
-from utils import operationExcel
+from apiAutotest.utils import operationExcel
 class operationJson:
     def __init__(self):
         self.excel=operationExcel.operationExcel()

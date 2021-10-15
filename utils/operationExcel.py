@@ -1,8 +1,8 @@
 #作者:Administrator
 #时间:2019/10/19
 import xlrd
-from utils.public import *
-from utils.excel_data import excel_data
+from apiAutotest.utils.public import *
+from apiAutotest.utils.excel_data import excel_data
 class operationExcel:
     # 初始化
     def __init__(self):

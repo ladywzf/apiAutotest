@@ -1,8 +1,8 @@
 #作者:Administrator
 #时间:2019/10/20
-from utils import operationExcel
-from utils.operationJson import operationJson as op
-from utils.public import *
+from apiAutotest.utils import operationExcel
+from apiAutotest.utils.operationJson import operationJson as op
+from apiAutotest.utils.public import *
 import requests
 import json
 class method:
