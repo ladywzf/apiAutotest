@@ -1,7 +1,7 @@
 #作者:Administrator
 #时间:2019/10/19
 import sys
-sys.path.append(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\apiAutotest')
+sys.path.append(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace')
 from xlutils import copy
 import os
 from apiAutotest.utils.operationJson import *
