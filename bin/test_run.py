@@ -4,8 +4,8 @@ import os
 import HTMLTestReport
 import time
 if __name__ == '__main__':
-    test_dir=os.path.join(os.path.dirname(os.path.dirname(__file__)),"tests")
-    #testcase=unittest.defaultTestLoader.discover(r'C:\Windows\System32\config\systemprofile\.jenkins\workspace\update\pre\be\tests',pattern='test*.py')
+    #test_dir=os.path.join(os.path.dirname(os.path.dirname(__file__)),"tests")
+    test_dir=unittest.defaultTestLoader.discover(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace\apiAutotest\tests',pattern='test*.py')
     testcase = unittest.defaultTestLoader.discover(test_dir,pattern='test*.py')
     #now = time.strftime("%Y-%m-%d_%H_%M_%S", time.localtime(time.time()))
     filepath = "E:\\"+"{0}".format(os.path.basename(os.path.dirname(os.path.dirname(__file__))))+"\\reports\\"
