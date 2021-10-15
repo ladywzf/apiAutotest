@@ -1,6 +1,5 @@
-import pytest
-import unittest
-import os
+import sys
+sys.path.append(r'C:\Windows\System32\config\systemprofile\AppData\Local\Jenkins\.jenkins\workspace')
 import HTMLTestReport
 from apiAutotest.tests.test_be import *
 import time
